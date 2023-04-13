@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Interactive card details form</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <div class="backcard">
+        <img class="back-card" src="images/bg-card-back.png" alt="back view card">
+        <h1 id="back-card-digit">
+          000
+        </h1>
+      </div>
+
+      <div class="frontcard">
+        <img class="front-card" src="images/bg-card-front.png" alt="front card view">
+        <img class="card-logo" src="images/card-logo.svg" alt="card logo">
+        <h1 id="front-card-digit">
+          0000 0000 0000 0000
+        </h1>
+        <div class="card-name-and-month">
+          <h1 id="card_name">
+            Jane Appleseed
+          </h1>
+          <h2 id="month"><span id="mnth">00</span> / <span id="year">00</span></h2>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  
+  <main>
+    <div class="container">
+        <form id="form" class="form">
+          <div class="form_card">
+              <div class="form-name">
+                <label for="cholder">Cardholder Name</label>
+                <input type="text"
+                id="cardholder"
+                name="cholder"
+                placeholder="e.g. Jane Appleseed"
+                onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || event.key == ' '"
+                required
+                >
+                <div id="error1" class="error_msg">
+                    Can't be blank
+                </div> 
+              </div>
+          </div>
+             
+              <div class="form_card">
+                <div class="form-number">
+                    <label for="cnumber">Card Number</label>
+                    <input type="text"
+                    id="cardnumber"
+                    name="cnumber"
+                    minlength="16"
+                    maxlength="19"
+                    placeholder="e.g. 1234 5678 9123 0000"
+                    
+                    onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                    required
+                    >
+                    <div id="error2" class="error_msg">
+                        Wrong format, numbers only
+                    </div>
+              </div>
+              </div>
+             
+              <div class="form_card">
+                <div class="form-month">
+                  <label for="cmonth">Exp.Date (mm/yy) <span class="cvc">cvc</span></label>
+                      <div class="flex-row">
+                        <div class="col">
+                          <input type="text"
+                          id="cardmonth"
+                          name="cmonth"
+                          minlength="2"
+                          maxlength="2"
+                          size="2"
+                          placeholder="MM"
+                          onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                          required
+                          >
+                          <div id="error3" class="error_msg">
+                            Can't be blank
+                          </div>       
+                        </div>
+
+
+
+                        <div class="col">
+                          <input type="text"
+                          id="cardmonthyear"
+                          name="cmonth"
+                          minlength="2"
+                          maxlength="2"
+                          size="2"
+                          placeholder="YY"
+                          onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                          required
+                          >
+                          <div id="error5" class="error_msg">
+                            Can't be blank
+                           </div>
+                        </div>
+                       
+                        <div class="col">
+                          <input type="text"
+                          id="cardmonthcvc"
+                          name="cmonth"
+                          minlength="3"
+                          maxlength="3"
+                          placeholder="e.g. 123"
+                          onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                          required
+                          >
+                          <div id="error4" class="error_msg">
+                            Can't be blank
+                           </div>
+                        </div>
+                       
+                      </div>
+              </div>
+              
+                        
+            
+              </div>
+              
+                <button class="btn" id="submit-btn">Confirm</button>
+              
+        </form>
+      
+    </div>
+
+
+
+
+     <!-- Completed state start  -->
+  <section>
+    <div class="container">
+      <div id="complete-details" class="thank_you">
+        <img src="images/icon-complete.svg" alt="done icon">
+        <h1 class="thank-msg">Thank you!</h1>
+        <p class="thank-p-msg">We've added your card details</p>
+        <button id="continue">Continue</button>
+      </div>
+    </div>
+    
+  </section>
+
+  </main>
+
+ 
+  
+  
+  <footer>
+    <div class="container">
+        <!-- <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+    </div>
+   
+  </footer>
+ 
+  <script src="work.js"></script>
+  <!-- <script src="index.js"></script> -->
+</body>
+</html>
