@@ -202,6 +202,50 @@ button {
     color: hsl(228, 45%, 44%); 
 }
 
+@media (min-width: 425px){
+    #back-card-digit {
+        top: 10.5rem;
+        left: 39rem;
+    }
+
+    #front-card-digit {
+        top: 15rem;
+    }
+
+    .back-card {
+        top: -0.5rem;
+        left: 4rem;
+    }
+
+    .front-card {
+        height: auto;
+    }
+
+    .card-name-and-month {
+        top: 23rem;
+    }
+
+    #month {
+        left: 28rem;
+    }
+
+    .card-logo {
+        width: 18%;
+    }
+
+    /*--------- typography --------*/
+
+    #front-card-digit {
+        font-size: 2.6em;
+    }
+
+    #card_name,
+    #month,
+    #back-card-digit {
+        font-size: 1.5rem;
+    }
+}
+
 @media (min-width: 800px){
     body {
         display: flex;

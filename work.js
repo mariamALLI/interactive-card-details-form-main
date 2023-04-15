@@ -16,7 +16,6 @@ const inputcardMonthCvc = document.querySelector('#cardmonthcvc')
 
 
 const inputSubmitBtn = document.getElementById('submit-btn')
-// const thankYou = document.querySelector('.thank_you')
 const form = document.querySelector('#form')
 const completeDetails = document.getElementById('complete-details')
 const continueBtn = document.getElementById('continue')
@@ -117,7 +116,6 @@ inputcardMonthCvc.addEventListener('keyup', (e)=>{
 
 inputSubmitBtn.addEventListener('click', (e)=>{
     e.preventDefault();
-    console.log('click')
 
     if(inputcardHolder.value &&
         inputcardNumber.value &&
@@ -133,6 +131,7 @@ inputSubmitBtn.addEventListener('click', (e)=>{
 
 continueBtn.addEventListener('click', (e)=>{
     form.style.display = 'block'
+    completeDetails.style.display = 'none'
     inputcardHolder.value = ''
     inputcardNumber.value = ''
     inputcardMonth.value = ''
