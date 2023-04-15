@@ -102,8 +102,6 @@ main {
 }
 
 .flex-row {
-    /* display: flex;
-    flex-direction: row; */
     display: grid;
     grid-template-columns: 80px 80px minmax(50px, 1fr);
 }
@@ -233,8 +231,6 @@ button {
         width: 18%;
     }
 
-    /*--------- typography --------*/
-
     #front-card-digit {
         font-size: 2.6em;
     }
@@ -261,10 +257,6 @@ button {
         height: 100vh;
     }
 
-    /* main {
-        justify-content: center;
-    } */
-
     .form {
         margin: 0 auto;
         max-width: 400px;
@@ -284,8 +276,8 @@ button {
     }
 
     #back-card-digit {
-        top: 32.5rem;
-        left: 37.5rem;
+        top: 33rem;
+        left: 39.5rem;
         font-size: 0.85em;
     }
 
