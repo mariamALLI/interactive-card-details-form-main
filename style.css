@@ -9,6 +9,7 @@ body {
     font-size: 1.125rem;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
 }
 
 header{
@@ -170,11 +171,17 @@ button {
     font-family: inherit;
     width: 100%;
     font-size: 1.2rem;
+    cursor: pointer;
 } 
 
 .btn,
 #continue {
     background-color: hsl(278, 68%, 11%);
+}
+
+.btn:hover,
+#continue:hover {
+    background-color: hsl(278, 94%, 30%);
 }
 
 .thank_you {
@@ -232,7 +239,7 @@ button {
     }
 
     #front-card-digit {
-        font-size: 2.6em;
+        font-size: 1.3em;
     }
 
     #card_name,
