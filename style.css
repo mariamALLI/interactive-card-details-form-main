@@ -319,4 +319,8 @@ button {
     #month {
         left: 17rem;
     }
+
+    button {
+        max-width: 450px;
+    }
 }
